@@ -5,7 +5,7 @@ public class Wind {
 	public static void main(String args[]){
 	
 		System.out.println(getKnots(kmh));
-		
+		System.out.println(getBeaufort(kmh));
 	}
 	
 	
@@ -15,4 +15,8 @@ public class Wind {
 	}
 	
 	
+	public static double getBeaufort(double kmh){
+	
+		return Math.round(Math.pow((kmh/3.6)/0.836,0.67));
+	}
 }
